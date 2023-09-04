@@ -6,7 +6,7 @@ const HomePage = () => {
       <Link
         to="/contacts"
       >
-        <h1>Add your contacts</h1>
+        <h1>Let's record your contacts</h1>
       </Link>
     </>
   );
