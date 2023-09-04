@@ -6,11 +6,11 @@ import { useEffect } from 'react';
 import { getError, getIsLoading, getModal } from 'redux/contacts/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/contact-operations';
-import { Loader } from '../components/Loader/Loader';
+//import { Loader } from '../components/Loader/Loader';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
+ // const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
 
   useEffect(() => {

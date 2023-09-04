@@ -3,7 +3,7 @@ import {
   fetchContacts,
   addContact,
   deleteContact,
-  updateContact,
+ // updateContact,
 } from './contact-operations';
 
 const hendlePending = state => {
