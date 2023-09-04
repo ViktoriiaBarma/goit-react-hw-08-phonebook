@@ -33,12 +33,17 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const form = e.target;
-          console.log(form.elements.name.value)
+    const form = e.currentTarget;
+    const name = form.name.value;
+    const number = form.number.value;
 
-      console.log(form.elements.number.value)
-      dispatch(addContact({ name: form.elements.name.value, phone: form.elements.number.value }));
 
+    const obj = {
+      name,
+      number
+    }
+      dispatch(addContact(obj));
+form.reset()
   };
 
   return (

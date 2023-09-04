@@ -8,18 +8,17 @@ const ContactList = () => {
 
   const contacts = useSelector(getContacts);
    console.log(contacts);
-  const filter = useSelector(getFilter);
-   console.log(filter);
-  const filteredContacts = contacts.filter(contact =>
-     contact.name.toLowerCase().includes(filter.toLowerCase())
-  
-  );
+  // const filter = useSelector(getFilter);
+  //  console.log(filter);
+  // const filteredContacts = contacts.filter(contact =>
+  //    contact.name === name
+  // );
 
 
 
    return (
     <List>
-      {filteredContacts && filteredContacts.map((contact) => {
+      {contacts?.map((contact) => {
         return (
           <Item key={contact.id}>
              <Contact key={contact.id} contact={contact} />
