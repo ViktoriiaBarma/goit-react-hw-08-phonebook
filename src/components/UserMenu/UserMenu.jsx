@@ -1,7 +1,7 @@
 import { useAuth } from 'hooks/useAuth';
 import { useDispatch } from 'react-redux';
 import { userLogOut } from 'redux/auth/auth-operations';
-import { Wrapper, Btn} from './UserMenu.styled';
+import { Wrapper, Btn, Content} from './UserMenu.styled';
 
 const UserMenu = () => {
   const { user } = useAuth();
@@ -11,7 +11,7 @@ const UserMenu = () => {
 
   return (
     <Wrapper>
-      <p>{user.name}</p>
+      <Content>{user.name}</Content>
       <Btn
         type="button"
         onClick={handleLogOut}

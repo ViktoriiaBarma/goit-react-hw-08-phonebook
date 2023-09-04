@@ -1,17 +1,22 @@
 import styled from 'styled-components';
 import { NavLink as Link } from 'react-router-dom';
 
-export const Navigate = styled.div`
-display: flex;
+export const NavConteiner = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 
-`
-
+   @media screen and (min-width: 480px) {
+     gap: 500px;
+  }
+`;
 
 export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 20px;
 `;
 
 export const NavLink = styled(Link)`
@@ -35,7 +40,7 @@ export const NavLink = styled(Link)`
     transition: all 0.2s ease-in-out;
 
     background-color: transparent;
-    color: red;
+    color: rgb(6, 58, 54);
 
     cursor: pointer;
   }

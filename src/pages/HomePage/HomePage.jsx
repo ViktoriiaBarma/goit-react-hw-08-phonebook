@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Title } from './HomePage.sryled';
 
 const HomePage = () => {
   return (
@@ -6,7 +7,7 @@ const HomePage = () => {
       <Link
         to="/contacts"
       >
-        <h1>Let's record your contacts</h1>
+        <Title>Let's record your contacts</Title>
       </Link>
     </>
   );
