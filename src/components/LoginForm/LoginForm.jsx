@@ -24,8 +24,9 @@ const LoginForm = () => {
     const email = form.email.value;
     const password = form.email.value;
 
-
+    console.log(email,password)
     dispatch(userLogIn({ email, password }));
+
   //  form.reset()
   };
 

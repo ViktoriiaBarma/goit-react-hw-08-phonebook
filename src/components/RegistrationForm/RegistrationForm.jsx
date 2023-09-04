@@ -7,15 +7,12 @@ import {
   LabelSpan,
 } from '../ContactForm/ContactForm.styled';
 import { RiMailFill, RiLockPasswordFill } from 'react-icons/ri';
-import {  BsPersonFill } from 'react-icons/bs';
+import { BsPersonFill } from 'react-icons/bs';
 import { userSignUp } from 'redux/auth/auth-operations';
 import { useDispatch } from 'react-redux';
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
-
-
-  
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -25,16 +22,16 @@ const RegistrationForm = () => {
     const newUser = {
       name: form.name.value,
       email: form.email.value,
-      password: form.password.value
-    }
+      password: form.password.value,
+    };
     dispatch(userSignUp(newUser));
-  //  form.reset()
+
+    console.log(newUser);
+    //  form.reset()
   };
 
-
-
   return (
-    <Form  onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <LabelWrapper>
         <FormField htmlFor="name">
           <BsPersonFill />
