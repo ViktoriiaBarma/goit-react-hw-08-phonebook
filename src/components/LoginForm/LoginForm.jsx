@@ -25,7 +25,8 @@ const LoginForm = () => {
     const password = form.email.value;
 
 
-    dispatch(userLogIn({email, password}));
+    dispatch(userLogIn({ email, password }));
+  //  form.reset()
   };
 
  

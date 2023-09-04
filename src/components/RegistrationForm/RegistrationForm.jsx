@@ -28,7 +28,7 @@ const RegistrationForm = () => {
       password: form.password.value
     }
     dispatch(userSignUp(newUser));
-
+  //  form.reset()
   };
 
 
