@@ -6,7 +6,13 @@ const RegistrPage = () => {
     <>
       <div >
         <div >
-          <h2 >
+          <h2 style={{
+          textAlign: 'center',
+              color: 'black',
+
+              fontSize: '36px',
+              marginBottom: '10px',
+          }}>
             Register an account
           </h2>
         </div>
@@ -14,7 +20,13 @@ const RegistrPage = () => {
         <div >
           <RegistrationForm />
 
-          <p >
+          <p style={{
+          textAlign: 'center',
+              color: 'black',
+
+              fontSize: '16px',
+              marginBottom: '10px',
+          }}>
             Already have an account?{' '}
             <Link
               to="/login"

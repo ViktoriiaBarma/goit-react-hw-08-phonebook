@@ -9,5 +9,13 @@ export const Title = styled.h1`
   font-size: 36px;
   font-weight: 700;
 
-  
+  padding: 10px;
+
+  &:hover,
+  &:focus {
+    background-color: #8974a1;
+    
+    box-shadow: rgb(255, 255, 255) -2px -2px 5px, rgb(139, 167, 147) 2px 2px 5px;
+    border-radius:10px;
+  }
 `;
