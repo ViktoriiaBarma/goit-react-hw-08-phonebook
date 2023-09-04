@@ -20,13 +20,7 @@ import { FcContacts } from 'react-icons/fc';
 
 const Navigation = () => {
   const { isLoggedIn } = useAuth();
-  // const dispatch = useDispatch();
-  // const handleLogOut = () => {
-  //   dispatch(userLogOut());
-  // };
-  // const handleLogIn = (v) => {
-  //   dispatch(userLogIn(v));
-  // };
+
 
   return (
 
@@ -59,28 +53,7 @@ const Navigation = () => {
               </NavLink>
             )}
           </div>
-            {/* <div >
-                  {isLoggedIn ? (
-                    <div >
-                      <p >
-                        {user.name}
-                      </p>
-                      <StyledButton
-                        type="button"
-                        onClick={handleLogOut}
-                       
-                      >
-                        LogOut 
-                      </StyledButton>
-                    </div>
-                  ) : (
-                    <NavLink
-                      to="/login" onClick={handleLogIn}
-                    >
-                      Log in <RiLogoutBoxRLine />
-                    </NavLink>
-                  )}
-                </div> */}
+         
         </div>
       </Navigate>
 

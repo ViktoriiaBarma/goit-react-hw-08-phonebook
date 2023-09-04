@@ -18,15 +18,21 @@ const ContactsPage = () => {
   }, [dispatch]);
 
   const isOpen = useSelector(getModal);
+
+
+  if (error) {
+  return <div>Something went wrong...</div>
+}
+
   return (
     <>
-      {isOpen && <Modal />}
-      <ContactForm />
+       {isOpen && <Modal />}
+       <ContactForm />
       <Filter />
-      <br />
-      {isLoading && !error ? <Loader /> : <ContactList />}
-      {/* <Loader /> */}
-    </>
+      <ContactList />
+      {/* {isLoading ? <Loader /> : <ContactList />}
+      <Loader /> */}
+    </> 
   );
 };
 export default ContactsPage;

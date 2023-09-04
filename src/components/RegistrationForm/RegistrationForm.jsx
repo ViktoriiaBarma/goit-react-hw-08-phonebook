@@ -14,9 +14,23 @@ import { useDispatch } from 'react-redux';
 const RegistrationForm = () => {
   const dispatch = useDispatch();
 
+
+  
+
   const handleSubmit = e => {
-    dispatch(userSignUp(e));
+    e.preventDefault();
+
+    const form = e.currentTarget;
+
+    const newUser = {
+      name: form.name.value,
+      email: form.email.value,
+      password: form.password.value
+    }
+    dispatch(userSignUp(newUser));
   };
+
+
 
   return (
     <Form  onSubmit={handleSubmit}>

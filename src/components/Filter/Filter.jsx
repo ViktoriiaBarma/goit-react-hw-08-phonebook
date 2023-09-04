@@ -24,7 +24,7 @@ const Filter = () => {
   };
   
   return (
-    <LabelDescr htmlFor="filter" initialValues={{ email: '', password: '' }}>
+    <LabelDescr htmlFor="filter">
       Find contacts by name
       <Input  id="name"
               name="filter"

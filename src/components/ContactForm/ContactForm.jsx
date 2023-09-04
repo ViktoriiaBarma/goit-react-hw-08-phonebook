@@ -10,25 +10,39 @@ import {
   LabelWrapper,
   LabelSpan,
 } from './ContactForm.styled';
-import { option } from 'utils/toastifyOptions';
-import { toast } from 'react-toastify';
-import { useSelector } from 'react-redux';
-import { getContacts } from 'redux/contacts/selectors';
+// import { option } from 'utils/toastifyOptions';
+// import { toast } from 'react-toastify';
+// import { useSelector } from 'react-redux';
+// import { getContacts } from 'redux/contacts/selectors';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+ // const contacts = useSelector(getContacts);
+  
+  //   const contacts = useSelector(getContacts);
 
-  const handleSubmit = (value, { resetForm }) => {
-    if (contacts.some(({ name }) => name === value.name)) {
-      return toast('contact alredy added', option);
-    }
-    dispatch(addContact(value));
-    resetForm();
-    toast('contact added', option);
+  // const handleSubmit = (value) => {
+  //   if (contacts.some(({ name }) => name === value.name)) {
+  //     return toast('contact alredy added', option);
+  //   }
+  //   dispatch(addContact(value));
+  //   toast('contact added', option);
+  // };
+
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+          console.log(form.elements.name.value)
+
+      console.log(form.elements.number.value)
+      dispatch(addContact({ name: form.elements.name.value, phone: form.elements.number.value }));
+
   };
+
   return (
-    <Form initialValues={{ name: '', number: '' }} onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <LabelWrapper>
         <FormField htmlFor="name">
           <BsPersonFill />

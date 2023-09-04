@@ -17,12 +17,20 @@ import {
 const LoginForm = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = (v, a) => {
-    dispatch(userLogIn(v));
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+
+    const email = form.email.value;
+    const password = form.email.value;
+
+
+    dispatch(userLogIn({email, password}));
   };
 
+ 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form  onSubmit={handleSubmit}>
       <LabelWrapper>
         <FormField htmlFor="email">
           <RiMailFill />

@@ -22,27 +22,31 @@ export const App = () => {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <div style={{
-      backgroundColor: 'red',
-            fontSize: '20px',
-            alignItems: 'center',
-          }}>WWW</div>
+    <div
+      style={{
+        backgroundColor: 'red',
+        fontSize: '20px',
+        alignItems: 'center',
+      }}
+    >
+      WWW
+    </div>
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index path="/" element={<HomePage />} />
         <Route
-          path="/contacts"
+          path="contacts"
           element={<PrivatRoute component={ContactsPage} redirectTo="/login" />}
         />
         <Route
-          path="/login"
+          path="login"
           element={
             <RestrictedRoute component={LoginPage} redirectTo="/contacts" />
           }
         />
         <Route
-          path="/registr"
+          path="registr"
           element={
             <RestrictedRoute component={RegistrPage} redirectTo="/contacts" />
           }

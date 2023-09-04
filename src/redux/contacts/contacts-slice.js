@@ -33,12 +33,12 @@ const contactSlice = createSlice({
     [fetchContacts.pending]: hendlePending,
     [addContact.pending]: hendlePending,
     [deleteContact.pending]: hendlePending,
-    [updateContact.pending]: hendlePending,
+    // [updateContact.pending]: hendlePending,
 
     [fetchContacts.rejected]: hendleReject,
     [addContact.rejected]: hendleReject,
     [deleteContact.rejected]: hendleReject,
-    [updateContact.rejected]: hendleReject,
+    // [updateContact.rejected]: hendleReject,
 
     [fetchContacts.fulfilled](state, action) {
       state.contacts.isLoading = false;
@@ -58,16 +58,16 @@ const contactSlice = createSlice({
       );
       state.contacts.items.splice(index, 1);
     },
-    [updateContact.fulfilled](state, action) {
-      state.contacts.isLoading = false;
-      state.contacts.error = null;
-      const index = state.contacts.items.findIndex(
-        contact => contact.id === action.payload.id
-      );
-      state.contacts.items.splice(index, 1, action.payload);
-    },
+    // [updateContact.fulfilled](state, action) {
+    //   state.contacts.isLoading = false;
+    //   state.contacts.error = null;
+    //   const index = state.contacts.items.findIndex(
+    //     contact => contact.id === action.payload.id
+    //   );
+    //   state.contacts.items.splice(index, 1, action.payload);
+    // },
   },
 });
 
-export const { getUpdatetContactId } = contactSlice.actions;
+//export const { getUpdatetContactId } = contactSlice.actions;
 export const contactReducer = contactSlice.reducer;
