@@ -1,9 +1,9 @@
 import { useAuth } from 'hooks/useAuth';
 import {  NavLink,Navigate } from './Navigation.styled';
 import { FcContacts } from 'react-icons/fc';
-import { useDispatch } from 'react-redux';
-import { userLogOut } from 'redux/auth/auth-operations';
-import { userLogIn } from 'redux/auth/auth-operations';
+// import { useDispatch } from 'react-redux';
+// import { userLogOut } from 'redux/auth/auth-operations';
+// import { userLogIn } from 'redux/auth/auth-operations';
 // import { RiLogoutBoxRLine } from 'react-icons/ri'
 // import { StyledButton } from 'components/ContactForm/ContactForm.styled';
 
@@ -19,14 +19,14 @@ import { userLogIn } from 'redux/auth/auth-operations';
 // };
 
 const Navigation = () => {
-  const { isLoggedIn, user } = useAuth();
-  const dispatch = useDispatch();
-  const handleLogOut = () => {
-    dispatch(userLogOut());
-  };
-  const handleLogIn = (v) => {
-    dispatch(userLogIn(v));
-  };
+  const { isLoggedIn } = useAuth();
+  // const dispatch = useDispatch();
+  // const handleLogOut = () => {
+  //   dispatch(userLogOut());
+  // };
+  // const handleLogIn = (v) => {
+  //   dispatch(userLogIn(v));
+  // };
 
   return (
 
