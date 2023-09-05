@@ -20,12 +20,16 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.currentTarget;
-
+console.log(form)
     const email = form.email.value;
-    const password = form.email.value;
+    const password = form.password.value;
+     const obj = {
+      email,
+      password
+    }
 
-    console.log(email,password)
-    dispatch(userLogIn({ email, password }));
+    console.log(obj.password)
+    dispatch(userLogIn(obj));
 
   //  form.reset()
   };
@@ -56,7 +60,7 @@ const LoginForm = () => {
         name="password"
         type="password"
         placeholder="Password"
-        autoComplete="current-password"
+       autoComplete="current-password"
       />
       <StyledButton type="submit">
         <RiLogoutBoxRLine />
