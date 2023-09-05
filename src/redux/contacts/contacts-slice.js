@@ -3,7 +3,7 @@ import {
   fetchContacts,
   addContact,
   deleteContact,
- // updateContact,
+  //updateContact,
 } from './contact-operations';
 
 const hendlePending = state => {
@@ -23,11 +23,13 @@ const contactSlice = createSlice({
       isLoading: false,
       error: null,
     },
+     filter: '',
   },
   reducers: {
-    getUpdatetContactId: (state, action) => {
-      state.contacts.updatedContact = action.payload;
+    filterContact(state, action) {
+      state.filter = action.payload;
     },
+
   },
   extraReducers: {
     [fetchContacts.pending]: hendlePending,
@@ -69,5 +71,5 @@ const contactSlice = createSlice({
   },
 });
 
-//export const { getUpdatetContactId } = contactSlice.actions;
+export const { filterContact } = contactSlice.actions;
 export const contactReducer = contactSlice.reducer;

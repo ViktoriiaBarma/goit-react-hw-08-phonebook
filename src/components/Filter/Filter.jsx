@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { filterContact } from 'redux/contacts/filter-slice';
+import { filterContact } from 'redux/contacts/contacts-slice';
 import { Input, LabelDescr } from './Filter.styled';
 
 const Filter = () => {
@@ -13,7 +13,7 @@ const Filter = () => {
   return (
     <LabelDescr htmlFor="filter">
       Find contacts by name
-      <Input name="filter" type="text" onChange={hendleFilter} />
+      <Input name="filter" type="text" onChange={hendleFilter}  debounceTimeout={500}/>
     </LabelDescr>
   );
 };
